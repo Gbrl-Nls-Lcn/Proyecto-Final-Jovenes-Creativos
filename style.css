@@ -63,8 +63,44 @@ nav ul li a:hover {
 
 /*Banner*/
 
+.banner {
+    background: url('/img/Contalcia_logo2.jpg') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: 50px;
+}
+
+.banner h2 {
+    font-size: 3rem;
+    background-color: rgba(255, 103, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #005f99;
+}
 
 /* Sección "Sobre Nosotros" */
+
+#Contalcia {
+    padding: 60px 20px;
+    background-color: #005f99;
+    text-align: center;
+    color: white;
+
+}
+
+#Contalcia img {
+    width: 200px;
+    margin-top: 20px;
+}
+
+#Contalcia p {
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 1.2rem;
+}
 
 
 /* Sección "Servicios" */
