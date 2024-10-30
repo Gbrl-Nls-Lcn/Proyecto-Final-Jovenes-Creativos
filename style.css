@@ -10,6 +10,7 @@ body {
 
 h2{
     font-size: 3rem;
+    color: #f4f4f4;
 }
 h3 {
     font-size: 2rem;
@@ -104,7 +105,56 @@ nav ul li a:hover {
 
 
 /* Sección "Servicios" */
+#Servicios {
+    padding: 60px 20px;
+    background-color: #403a3a;
+    text-align: center;
+}
 
+#Servicios img {
+    width: 30%;
+    max-height: 20rem;
+    margin-top: 20px;
+
+    
+}
+#Servicios h3{
+    color: #ff6700;
+
+}
+#Nombre_producto{
+    margin-top:12% ;
+}
+#Servicios p{
+    color: #72c7c7;
+}
+.img_productos{
+    display: flex;
+    justify-content: space-around;
+}
+
+.producto {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    background-color: #2a2a2a;
+    color: #B0B0B0 ;
+    border-radius: 20px;
+    padding: 1%;
+
+}
+
+.producto h3 {
+    color: #ff6700; /* Naranja */
+    font-size: 1.5rem;
+}
+
+.producto p {
+    max-width: 250px;
+    text-align: center;
+    
+}
 
 /*Sección "Reseñas" */
 
