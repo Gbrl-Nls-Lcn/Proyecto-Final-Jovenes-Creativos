@@ -65,7 +65,7 @@ nav ul li a:hover {
 /*Banner*/
 
 .banner {
-    background: url('/img/Contalcia_logo2.jpg') no-repeat center center/cover;
+    background: url('/Proyecto-Final-Jovenes-Creativos/img/Contalcia_logo2.jpg') no-repeat center center/cover;
     height: 300px;
     display: flex;
     align-items: center;
@@ -146,7 +146,7 @@ nav ul li a:hover {
 }
 
 .producto h3 {
-    color: #ff6700; /* Naranja */
+    color: #ff6700;
     font-size: 1.5rem;
 }
 
@@ -157,6 +157,42 @@ nav ul li a:hover {
 }
 
 /*Sección "Reseñas" */
+#Reseñas {
+    background-color: #005f99;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+#Reseñas p {
+    font-style: italic;
+    max-width: 600px;
+    margin: 10px auto;
+    font-size: 1.1rem;
+}
 
 
 /*Footer*/
+
+footer {
+    background-color: #ff6700; 
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer h2 {
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #005f99;
+}
