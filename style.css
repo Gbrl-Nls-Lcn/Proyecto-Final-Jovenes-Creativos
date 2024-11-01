@@ -233,3 +233,79 @@ footer {
 }
 
 /*Pagina de Registro*/
+#body_formulario {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#h1_formulario {
+    color: #005f99;
+}
+
+/*Enlace de la pagina de inicio*/
+#inicio_formulario {
+    text-decoration: none;
+    color: #ff6700;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+    
+}
+#inicio_formulario:hover{
+    background-color: #005f99;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+/*Formulario de registro*/
+#formRegistro {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    
+}
+button {
+    background-color: #ff6700; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #005f99; 
+}
