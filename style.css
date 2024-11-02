@@ -309,3 +309,99 @@ button {
 button:hover {
     background-color: #005f99; 
 }
+
+/*Diseño Responsive*/
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .producto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner h2 {
+        font-size: 2.5rem;
+    }
+
+    #Servicios img {
+        max-width: 80%;
+    }
+
+    .img_productos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner {
+        padding-top: 7rem;
+    }
+    
+    .footer-contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-seccion {
+        text-align: center;
+    }
+    
+    
+    /*Parte de la página de registro*/
+    #formRegistro {
+        width: 90%;
+    }
+}
+
+/*Responsive para pantallas más pequeñas*/
+@media (max-width: 480px) {
+    .banner {
+        height: 200px;
+        padding-top: 7rem;
+    }
+
+    .banner h2 {
+        font-size: 1.8rem;
+        padding: 5px 10px;
+    }
+
+    nav ul {
+        padding: 8px 0;
+    }
+
+    nav ul li {
+        margin-bottom: 8px;
+    }
+
+    #Servicios img {
+        max-width: 90%;
+    }
+
+    #Contalcia p, #Reseñas p {
+        font-size: 1rem;
+    }
+
+    .producto p {
+        text-align: center;
+    }
+
+    .footer-contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-seccion {
+        text-align: center;
+    }
+
+    /*Parte de la página de registro*/
+    #formRegistro{
+        width: 90%;
+    }
+}
