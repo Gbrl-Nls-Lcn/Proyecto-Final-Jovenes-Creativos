@@ -48,4 +48,26 @@ document.addEventListener('DOMContentLoaded', function() {
             loginVentana.style.display = 'none';
         }
     });
+
+    // Función para iniciar sesión
+    function loginUser(event) {
+         
+        const email_Login = document.getElementById('loginEmail').value;
+        const password_Login = document.getElementById('loginPassword').value;
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+
+        const user = users.find(user => user.email === email_Login && user.password === password_Login);
+        if (user) {
+            alert(`¡Bienvenido, ${user.nombre}!`);
+            loginVentana.style.display = 'none';
+        } else {
+            alert('Correo o contraseña incorrectos.');
+        }
+        event.preventDefault();
+    }
+
+    const formLogin = document.getElementById('formLogin');
+    if (formLogin) {
+        formLogin.addEventListener('submit', loginUser);
+    }
 });
