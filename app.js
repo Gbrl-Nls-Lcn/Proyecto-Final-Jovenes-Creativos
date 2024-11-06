@@ -14,7 +14,7 @@ function registerUser(event) {
         return;
     }
 
-    
+
     const newUser = { nombre, apellido, email, password };
     users.push(newUser);
     localStorage.setItem('users', JSON.stringify(users));
@@ -25,5 +25,18 @@ function registerUser(event) {
     event.preventDefault();
 
 }
-document.getElementById('formRegistro').addEventListener('submit', registerUser);
 
+// Abrir y Cerrar la ventana de Inicio de Sesión
+const loginBtn = document.getElementById('inicio_Sesion');
+const login_ventana = document.getElementById('ventana_Login');
+const close_Login = document.getElementById('close_Login');
+
+loginBtn.addEventListener('click', () => {
+    login_ventana.style.display = 'block';
+});
+
+close_Login.addEventListener('click', () => {
+    login_ventana.style.display = 'none';
+});
+
+document.getElementById('formRegistro').addEventListener('submit', registerUser);
