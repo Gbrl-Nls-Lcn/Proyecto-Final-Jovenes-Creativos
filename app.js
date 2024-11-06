@@ -1,42 +1,51 @@
-// Función para registrar usuarios
-function registerUser(event) {
+document.addEventListener('DOMContentLoaded', function() {
+    // Función para registrar usuarios
+    function registerUser(event) {
+        const nombre = document.getElementById('nombre').value;
+        const apellido = document.getElementById('apellido').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const users = JSON.parse(localStorage.getItem('users')) || [];
 
-    const nombre = document.getElementById('nombre').value;
-    const apellido = document.getElementById('apellido').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const users = JSON.parse(localStorage.getItem('users')) || [];
+        const userExists = users.find(user => user.email === email);
+        if (userExists) {
+            alert('El usuario ya está registrado.');
+            return;
+        }
 
+        const newUser = { nombre, apellido, email, password };
+        users.push(newUser);
+        localStorage.setItem('users', JSON.stringify(users));
 
-    const userExists = users.find(user => user.email === email);
-    if (userExists) {
-        alert('El usuario ya está registrado.');
-        return;
+        alert('¡Registro exitoso!');
+        document.getElementById('formRegistro').reset();
+        event.preventDefault();
     }
 
+    const formRegistro = document.getElementById('formRegistro');
+    if (formRegistro) {
+        formRegistro.addEventListener('submit', registerUser);
+    }
 
-    const newUser = { nombre, apellido, email, password };
-    users.push(newUser);
-    localStorage.setItem('users', JSON.stringify(users));
+    const loginBtn = document.getElementById('inicio_Sesion');
+    const loginVentana = document.getElementById('ventana_Login');
+    const closeLogin = document.getElementById('close_Login');
 
-    alert('¡Registro exitoso!');
-    document.getElementById('formRegistro').reset();
+    if (loginBtn) {
+        loginBtn.addEventListener('click', () => {
+            loginVentana.style.display = 'block';
+        });
+    }
 
-    event.preventDefault();
+    if (closeLogin) {
+        closeLogin.addEventListener('click', () => {
+            loginVentana.style.display = 'none';
+        });
+    }
 
-}
-
-// Abrir y Cerrar la ventana de Inicio de Sesión
-const loginBtn = document.getElementById('inicio_Sesion');
-const login_ventana = document.getElementById('ventana_Login');
-const close_Login = document.getElementById('close_Login');
-
-loginBtn.addEventListener('click', () => {
-    login_ventana.style.display = 'block';
+    window.addEventListener('click', (event) => {
+        if (event.target === loginVentana) {
+            loginVentana.style.display = 'none';
+        }
+    });
 });
-
-close_Login.addEventListener('click', () => {
-    login_ventana.style.display = 'none';
-});
-
-document.getElementById('formRegistro').addEventListener('submit', registerUser);
